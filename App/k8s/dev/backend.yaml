@@ -4,43 +4,43 @@ metadata:
   name: wordpress-backend-dev
 spec:
   replicas: 1
-    template:
-      metadata:
-        name: backend
-        labels:
-          app: rfpselect
-          role: backend
-          env: dev
-      spec:
-        containers:
-          - image: launcher.gcr.io/google/wordpress4-php7-apache
-            name: wordpress
-            env:
-              - name: "WORDPRESS_DB_HOST"
-                value: "127.0.0.1:3306"
-              - name: "WORDPRESS_DB_PASSWORD"
-                value: "example-password"
-            volumeMounts:
-              - name: wordpress-data
-                mountPath: /var/www/html
-                subPath: wp
-          - image: launcher.gcr.io/google/mysql5
-            name: mysql
-            env:
-              - name: "MYSQL_ROOT_PASSWORD"
-                value: "example-password"
-            volumeMounts:
-              - name: mysql-data
-                mountPath: /var/lib/mysql
-                subPath: db
-        volumes:
-          - name: wordpress-data
-            persistentVolumeClaim:
-              claimName: wordpress-data
-          - name: mysql-data
-            persistentVolumeClaim:
-              claimName: mysql-data
-  ---
+  template:
+    metadata:
+      name: backend
+      labels:
+        app: rfpselect
+        role: backend
+        env: dev
+    spec:
+      containers:
+        - image: launcher.gcr.io/google/wordpress4-php7-apache
+          name: wordpress
+          env:
+            - name: "WORDPRESS_DB_HOST"
+              value: "127.0.0.1:3306"
+            - name: "WORDPRESS_DB_PASSWORD"
+              value: "example-password"
+          volumeMounts:
+            - name: wordpress-data
+              mountPath: /var/www/html
+              subPath: wp
+        - image: launcher.gcr.io/google/mysql5
+          name: mysql
+          env:
+            - name: "MYSQL_ROOT_PASSWORD"
+              value: "example-password"
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
+              subPath: db
+      volumes:
+        - name: wordpress-data
+          persistentVolumeClaim:
+            claimName: wordpress-data
+        - name: mysql-data
+          persistentVolumeClaim:
+            claimName: mysql-data
+---
 # Request a persistent volume from the cluster using a Persistent Volume Claim.
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -66,3 +66,5 @@ spec:
   resources:
     requests:
       storage: 5Gi
+
+
