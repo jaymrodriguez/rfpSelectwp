@@ -12,6 +12,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: qwerty
     volumes:
-      - my-datavolume:/var/lib/mysql
+      - rfpselect-datavolume:/var/lib/mysql
 volumes:
-  my-datavolume:
+  rfpselect-datavolume:
