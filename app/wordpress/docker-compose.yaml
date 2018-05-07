@@ -1,7 +1,8 @@
 version: '3'
 services:
   wp:
-    build: .
+    #build: .
+    image: "randyjp/rfpselect-wp"
     ports:
       - "8000:80"
     environment:
