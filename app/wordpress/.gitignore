@@ -1,0 +1,6 @@
+# composer files
+vendor/
+
+# wordpress files
+wp/
+
