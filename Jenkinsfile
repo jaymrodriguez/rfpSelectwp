@@ -1,12 +1,12 @@
 node {
   def project = 'rfpselectdev'
-  def appName = 'RFP-Select'
+  def appName = 'rfpselect-wp'
   def feSvcName = "${appName}-backend"
   def imageTag = "us.gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
 
   checkout scm
 
-  stage 'Build image'
+  stage('Build image')
   sh("docker build -t ${imageTag} .")
 
 //   stage 'Run Go tests'
