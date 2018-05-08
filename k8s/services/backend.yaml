@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: rfpselect-frontend
+  name: rfpselect-wp
 spec:
   type: LoadBalancer
   ports:
