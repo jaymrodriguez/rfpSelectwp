@@ -1,0 +1,51 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wordpress-backend-dev
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: backend
+      labels:
+        app: rfpselect
+        role: backend
+        env: canary
+    spec:
+      containers:
+        - image: us.gcr.io/rfpselectdev/rfpselect-wp:1.0.0
+          name: wordpress
+          env:
+            - name: "WORDPRESS_DB_HOST"
+              value: "127.0.0.1:3306"
+            - name: "WORDPRESS_DB_PASSWORD"
+              value: "qwerty"
+        - image: mysql:5.7
+          name: mysql
+          env:
+            - name: "MYSQL_ROOT_PASSWORD"
+              value: "example-password"
+          volumeMounts:
+            - name: rfpselect-datavolume
+              mountPath: /var/lib/mysql
+              subPath: db
+      volumes:
+      - name: rfpselect-datavolume
+        persistentVolumeClaim:
+          claimName: rfpselect-datavolume
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: rfpselect-datavolume
+  name: rfpselect-datavolume
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+status: {}
