@@ -24,7 +24,7 @@ spec:
           name: mysql
           env:
             - name: "MYSQL_ROOT_PASSWORD"
-              value: "example-password"
+              value: "qwerty"
           volumeMounts:
             - name: rfpselect-datavolume
               mountPath: /var/lib/mysql
