@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y git zip unzip
 RUN curl -o /tmp/composer.phar http://getcomposer.org/composer.phar \
   && mv /tmp/composer.phar /usr/local/bin/composer && chmod a+x /usr/local/bin/composer
 # install our dependencies(wordpress, themes and plugins)
-RUN composer install --no-plugins --no-scripts
+RUN composer install
