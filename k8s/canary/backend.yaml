@@ -38,14 +38,11 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  creationTimestamp: null
-  labels:
-    io.kompose.service: rfpselect-datavolume
   name: rfpselect-datavolume
+  annotations:
+    volume.alpha.kubernetes.io/storage-class: default
 spec:
-  accessModes:
-  - ReadWriteOnce
+  accessModes: [ReadWriteOnce]
   resources:
     requests:
-      storage: 1Gi
-status: {}
+      storage: 2Gi
