@@ -2,7 +2,7 @@ FROM wordpress:php7.2-apache
 COPY . /var/www/html
 
 # install git
-RUN apt-get update && apt-get install -y git install zip unzip
+RUN apt-get update && apt-get install -y git zip unzip
 
 # install composer
 RUN curl -o /tmp/composer.phar http://getcomposer.org/composer.phar \
