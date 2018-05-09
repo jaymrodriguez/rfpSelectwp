@@ -23,7 +23,7 @@
       }
     ],
     "require":{
-      "php": "<=7.1.1",
+      "php": ">7.2",
       "wordpress": "4.9.5",
       "fancyguy/webroot-installer": "1.1.0",
       "wpackagist-theme/twentyseventeen": "1.3",
