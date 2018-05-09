@@ -1,0 +1,12 @@
+k8s/
+jenkins/
+vendor/
+wp/
+
+.git
+.dockerignore
+.gitignore
+
+docker-compose.yaml
+Dockerfile
+jenkinsfile

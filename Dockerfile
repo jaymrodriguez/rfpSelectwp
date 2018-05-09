@@ -1,7 +1,7 @@
 FROM wordpress:php7.2-apache
-COPY composer.json /var/www/html
-COPY composer.lock /var/www/html
-
+# COPY composer.json /var/www/html
+# COPY composer.lock /var/www/html
+COPY . /var/www/html
 
 # install git
 RUN apt-get update && apt-get install -y git zip unzip
