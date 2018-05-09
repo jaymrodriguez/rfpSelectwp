@@ -19,12 +19,12 @@ spec:
             - name: "WORDPRESS_DB_HOST"
               value: "127.0.0.1:3306"
             - name: "WORDPRESS_DB_PASSWORD"
-              value: "qwerty"
+              value: "qwerty987"
         - image: mysql:5.7
           name: mysql
           env:
             - name: "MYSQL_ROOT_PASSWORD"
-              value: "example-password"
+              value: "qwerty987"
           volumeMounts:
             - name: rfpselect-datavolume
               mountPath: /var/lib/mysql
