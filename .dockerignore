@@ -9,4 +9,5 @@ wp/
 
 docker-compose.yaml
 Dockerfile
-jenkinsfile
+Jenkinsfile
+README.md
