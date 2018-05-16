@@ -11,3 +11,5 @@ docker-compose.yaml
 Dockerfile
 Jenkinsfile
 README.md
+
+*.code-workspace

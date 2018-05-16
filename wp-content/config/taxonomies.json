@@ -1,0 +1,10 @@
+{
+    "tax\/category": "[{\"term_id\":1,\"name\":\"Uncategorized\",\"slug\":\"uncategorized\",\"description\":\"\",\"parent\":0}]",
+    "tax\/post_tag": "[]",
+    "tax\/nav_menu": "[]",
+    "tax\/link_category": "[]",
+    "tax\/post_format": "[]",
+    "tax\/resourcing": "[{\"term_id\":2,\"name\":\"Local\",\"slug\":\"local\",\"description\":\"\",\"parent\":0}]",
+    "tax\/technologies": "[{\"term_id\":3,\"name\":\"PHP\",\"slug\":\"php\",\"description\":\"\",\"parent\":0}]",
+    ".label": "Taxonomies"
+}
