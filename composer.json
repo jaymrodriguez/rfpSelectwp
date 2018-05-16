@@ -30,7 +30,8 @@
       "wpackagist-plugin/akismet": "4.0",
         "wpackagist-plugin/wp-cfm": "^1.4",
         "wpackagist-plugin/custom-post-type-ui": "^1.5",
-        "wpackagist-plugin/advanced-custom-fields": "^5.6"
+        "wpackagist-plugin/advanced-custom-fields": "^5.6",
+        "wpackagist-plugin/acf-to-rest-api": "^3.1"
     },
     "extra":{
       "webroot-dir": "wp",
