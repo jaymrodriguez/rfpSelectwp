@@ -1,5 +1,5 @@
 {
-    "tax\/category": "[{\"term_id\":1,\"name\":\"Uncategorized\",\"slug\":\"uncategorized\",\"description\":\"\",\"parent\":0}]",
+    "tax\/category": "[{\"term_id\":9,\"name\":\"Angular\",\"slug\":\"angular\",\"description\":\"\",\"parent\":7},{\"term_id\":4,\"name\":\"CMS\",\"slug\":\"cms\",\"description\":\"\",\"parent\":0},{\"term_id\":6,\"name\":\"Drupal\",\"slug\":\"drupal\",\"description\":\"\",\"parent\":4},{\"term_id\":7,\"name\":\"JS Frameworks\",\"slug\":\"js-frameworks\",\"description\":\"\",\"parent\":0},{\"term_id\":8,\"name\":\"ReactJS\",\"slug\":\"reactjs\",\"description\":\"\",\"parent\":7},{\"term_id\":1,\"name\":\"Uncategorized\",\"slug\":\"uncategorized\",\"description\":\"\",\"parent\":0},{\"term_id\":5,\"name\":\"Wordpress\",\"slug\":\"wordpress\",\"description\":\"\",\"parent\":4}]",
     "tax\/post_tag": "[]",
     "tax\/nav_menu": "[]",
     "tax\/link_category": "[]",
