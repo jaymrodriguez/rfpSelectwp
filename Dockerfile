@@ -12,3 +12,6 @@ RUN curl -o /tmp/composer.phar http://getcomposer.org/composer.phar \
 # install our dependencies(wordpress, themes and plugins)
 WORKDIR  /var/www/html
 RUN composer install
+
+#make config folder writable
+RUN chmod 755 ./wp-content/config
