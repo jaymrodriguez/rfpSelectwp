@@ -4,3 +4,6 @@ vendor/
 # wordpress files
 wp/
 
+# IDE
+*.code-workspace
+
