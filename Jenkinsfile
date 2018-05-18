@@ -29,7 +29,7 @@ node {
 
     // Roll out to production
     case "production":
-        sh("kubectl get ns development || kubectl create ns development")
+        sh("kubectl get ns production || kubectl create ns production")
         // Change deployed image in canary to the one we just built
         sh("sed -i.bak 's#us.gcr.io/rfpselectdev/rfpselect-wp:1.0.0#${imageTag}#' ./k8s/production/*.yaml")
         sh("kubectl --namespace=production apply -f k8s/services/")
