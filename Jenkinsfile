@@ -41,10 +41,10 @@ node {
     case "master":
         sh("kubectl get ns development || kubectl create ns development")
         // Change deployed image in canary to the one we just built
-        sh("sed -i.bak 's#us.gcr.io/rfpselectdev/rfpselect-wp:1.0.0#${imageTag}#' ./k8s/production/*.yaml")
+        sh("sed -i.bak 's#us.gcr.io/rfpselectdev/rfpselect-wp:1.0.0#${imageTag}#' ./k8s/dev/*.yaml")
         sh("kubectl --namespace=development apply -f k8s/services/")
         sh("kubectl --namespace=development apply -f k8s/dev/")
-        sh("echo http://`kubectl --namespace=production get service/${feSvcName} --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
+        sh("echo http://`kubectl --namespace=development get service/${feSvcName} --output=json | jq -r '.status.loadBalancer.ingress[0].ip'` > ${feSvcName}")
         break
   }
 }
