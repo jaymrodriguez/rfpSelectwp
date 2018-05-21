@@ -59,6 +59,8 @@ RUN composer install; \
 
 COPY docker-entrypoint.sh /usr/local/bin/ 
 
+COPY wp-content/config /var/www/html/wp-content
+
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["docker-entrypoint.sh"]
