@@ -2,7 +2,7 @@ k8s/
 jenkins/
 vendor/
 wp/
-wp-content/plugins
+#wp-content/plugins
 wp-content/themes
 
 .git
