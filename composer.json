@@ -20,7 +20,22 @@
             "fancyguy/webroot-installer": "1.1.0"
           }
         }
-      }
+      },
+      {
+			"type": "package",
+			"package": {
+				"name": "forumone/wp-cfm",
+				"version": "dev-wp-org-update",
+				"type": "wordpress-plugin",
+				"dist": {
+					"type": "zip",
+					"url": "https://github.com/forumone/wp-cfm/archive/wp-org-update.zip"
+				},
+				"require": {
+					"composer/installers": "^1.0"
+				}
+			}
+		}
     ],
     "require":{
       "php": ">7.2",
@@ -28,10 +43,10 @@
       "fancyguy/webroot-installer": "1.1.0",
       "wpackagist-theme/twentyseventeen": "1.3",
       "wpackagist-plugin/akismet": "4.0",
-        "wpackagist-plugin/wp-cfm": "^1.4",
-        "wpackagist-plugin/custom-post-type-ui": "^1.5",
-        "wpackagist-plugin/advanced-custom-fields": "^5.6",
-        "wpackagist-plugin/acf-to-rest-api": "^3.1"
+      "forumone/wp-cfm": "dev-wp-org-update",
+      "wpackagist-plugin/custom-post-type-ui": "^1.5",
+      "wpackagist-plugin/advanced-custom-fields": "^5.6",
+      "wpackagist-plugin/acf-to-rest-api": "^3.1"
     },
     "extra":{
       "webroot-dir": "wp",
