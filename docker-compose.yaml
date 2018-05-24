@@ -18,3 +18,8 @@ services:
       - rfpselect-datavolume:/var/lib/mysql
 volumes:
   rfpselect-datavolume:
+
+networks:
+  default:
+    external:
+      name: rfpselect-network
