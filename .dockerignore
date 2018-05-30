@@ -2,6 +2,8 @@ k8s/
 jenkins/
 vendor/
 wp/
+#wp-content/plugins
+wp-content/themes
 
 .git
 .dockerignore
@@ -9,4 +11,7 @@ wp/
 
 docker-compose.yaml
 Dockerfile
-jenkinsfile
+Jenkinsfile
+README.md
+
+*.code-workspace
