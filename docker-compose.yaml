@@ -7,6 +7,9 @@ services:
       - "8000:80"
     environment:
       WORDPRESS_DB_PASSWORD: qwerty
+    volumes: 
+      - ./wp-content/config:/var/www/html/wp-content/config
+      - ./acf-json:/var/www/html/wp-content/themes/twentyseventeen/acf-json
   mysql:
     image: "mysql:5.7"
     environment:
@@ -15,3 +18,8 @@ services:
       - rfpselect-datavolume:/var/lib/mysql
 volumes:
   rfpselect-datavolume:
+
+networks:
+  default:
+    external:
+      name: rfpselect-network

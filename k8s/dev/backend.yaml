@@ -10,7 +10,7 @@ spec:
       labels:
         app: rfpselect
         role: backend
-        env: dev
+        env: development
     spec:
       containers:
         - image: us.gcr.io/rfpselectdev/rfpselect-wp:1.0.0
