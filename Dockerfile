@@ -71,7 +71,7 @@ COPY wp-content/config /var/www/html/wp-content/config
 
 COPY acf-json /var/www/html/wp-content/themes/twentyseventeen/acf-json
 
-COPY wp-content/plugins/rfp-filters /var/www/html/wp-content/plugins/rfp-filters 
+COPY rfp-filters /var/www/html/wp-content/plugins/rfp-filters 
 
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
