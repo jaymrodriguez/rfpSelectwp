@@ -2,7 +2,7 @@ k8s/
 jenkins/
 vendor/
 wp/
-rfp-filters/
+#rfp-filters/
 #wp-content/plugins
 wp-content/themes
 
