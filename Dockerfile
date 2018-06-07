@@ -57,9 +57,12 @@ RUN composer install; \
     mv wp-content /var/www/html; \ 
     mkdir /var/www/html/wp-content/config; \
     mkdir /var/www/html/wp-content/themes/twentyseventeen/acf-json; \
+	mkdir /var/www/html/wp-content/plugins/rfp-filters; \
     chown -R www-data:www-data /usr/src/wp; \
     chown -R www-data:www-data /var/www/html/wp-content/config; \
-    chown -R www-data:www-data /var/www/html/wp-content/themes/twentyseventeen/acf-json 
+    chown -R www-data:www-data /var/www/html/wp-content/themes/twentyseventeen/acf-json; \
+	chown -R www-data:www-data /var/www/html/wp-content/plugins/rfp-filters 
+
 
 
 COPY docker-entrypoint.sh /usr/local/bin/ 
@@ -67,7 +70,9 @@ COPY docker-entrypoint.sh /usr/local/bin/
 COPY wp-content/config /var/www/html/wp-content/config
 
 COPY acf-json /var/www/html/wp-content/themes/twentyseventeen/acf-json
-# COPY acf-json /usr/src/wp/wp-content/themes/twentyseventeen
+
+COPY wp-content/plugins/rfp-filters /var/www/html/wp-content/plugins/rfp-filters 
+
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
