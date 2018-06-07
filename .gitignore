@@ -3,7 +3,7 @@ vendor/
 
 # wordpress files
 wp/
-wp-content/plugins
+#wp-content/plugins
 wp-content/themes
 
 # IDE
