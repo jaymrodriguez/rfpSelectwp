@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9356acf9bf16cbab752996aff070471",
+    "content-hash": "3ef076931b3dbee199b70d073de71d83",
     "packages": [
         {
             "name": "composer/installers",
@@ -169,11 +169,22 @@
             "time": "2013-03-15T17:51:14+00:00"
         },
         {
-            "name": "wordpress",
-            "version": "4.9.5",
+            "name": "forumone/wp-cfm",
+            "version": "dev-wp-org-update",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/4.9.5.zip",
+                "url": "https://github.com/forumone/wp-cfm/archive/wp-org-update.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "wordpress",
+            "version": "4.9.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/WordPress/WordPress/archive/4.9.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -181,6 +192,20 @@
                 "fancyguy/webroot-installer": "1.1.0"
             },
             "type": "webroot"
+        },
+        {
+            "name": "wp-api/basic-auth",
+            "version": "master",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/WP-API/Basic-Auth/archive/master.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "wpackagist-plugin/acf-to-rest-api",
@@ -224,15 +249,15 @@
         },
         {
             "name": "wpackagist-plugin/akismet",
-            "version": "4.0",
+            "version": "4.0.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/4.0"
+                "reference": "tags/4.0.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.4.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.4.0.8.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -263,16 +288,16 @@
             "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
         },
         {
-            "name": "wpackagist-plugin/wp-cfm",
-            "version": "1.4.5",
+            "name": "wpackagist-plugin/wp-mail-smtp",
+            "version": "1.2.5",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-cfm/",
-                "reference": "trunk"
+                "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
+                "reference": "tags/1.2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-cfm.zip?timestamp=1467943964",
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.2.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -280,7 +305,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-cfm/"
+            "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
         },
         {
             "name": "wpackagist-theme/twentyseventeen",
@@ -306,7 +331,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "forumone/wp-cfm": 20,
+        "wp-api/basic-auth": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
