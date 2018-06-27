@@ -144,7 +144,7 @@
             "name": "is_hq",
             "type": "true_false",
             "instructions": "checked if the address is company's headquarter",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -175,5 +175,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1527536766
+    "modified": 1528310635
 }
