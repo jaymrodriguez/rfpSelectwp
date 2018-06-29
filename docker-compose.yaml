@@ -17,10 +17,13 @@ services:
     volumes:
       - rfpselect-datavolume:/var/lib/mysql
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.1.4
     container_name: elasticsearch
     environment:
       - cluster.name=rfp-select-cluster
+      # - network.host=0
+      # - http.cors.allow-origin=*
+      # - http.cors.enabled=true
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ulimits:
@@ -28,12 +31,12 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - esdata1:/usr/share/elasticsearch/data
+      - esdata100:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
 volumes:
   rfpselect-datavolume:
-  esdata1:
+  esdata100:
 
 
 networks:
