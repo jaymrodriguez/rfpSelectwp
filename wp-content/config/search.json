@@ -1,0 +1,4 @@
+{
+    "wpsolr_solr_indexes": "a:1:{s:12:\"solr_indexes\";a:1:{s:32:\"A1DD8A75219D142B51D90BC4F76869EA\";a:16:{s:23:\"managed_solr_service_id\";s:0:\"\";s:10:\"index_type\";s:0:\"\";s:12:\"index_engine\";s:20:\"engine_elasticsearch\";s:10:\"index_name\";s:8:\"rfpindex\";s:11:\"index_label\";s:8:\"rfpindex\";s:14:\"index_protocol\";s:4:\"http\";s:10:\"index_host\";s:13:\"elasticsearch\";s:10:\"index_port\";s:4:\"9200\";s:10:\"index_path\";s:0:\"\";s:26:\"index_elasticsearch_shards\";s:1:\"5\";s:28:\"index_elasticsearch_replicas\";s:1:\"1\";s:23:\"index_solr_cloud_shards\";s:1:\"1\";s:35:\"index_solr_cloud_replication_factor\";s:1:\"1\";s:32:\"index_solr_cloud_max_shards_node\";s:1:\"1\";s:9:\"index_key\";s:0:\"\";s:12:\"index_secret\";s:0:\"\";}}}",
+    ".label": "Search"
+}
