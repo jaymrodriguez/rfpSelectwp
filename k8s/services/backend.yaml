@@ -9,10 +9,6 @@ spec:
     port: 8000
     targetPort: 80
     protocol: TCP
-  - name: "elasticsearch"
-    port: 9200
-    targetPort: 9200
-    protocol: TCP
   selector:
     app: rfpselect
     role: backend 
