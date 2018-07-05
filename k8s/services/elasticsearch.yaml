@@ -7,9 +7,13 @@ metadata:
 spec:
   type: LoadBalancer 
   ports:
-  - port: 9200
-    name: serving
-  - port: 9300
-    name: node-to-node
+  - name: "serving"
+    port: 9200
+    targetPort: 9200
+    protocol: TCP
+  - name: "node-to-node"
+    port: 9300
+    targetPort: 9300
+    protocol: TCP
 selector:
   service: elasticsearch
