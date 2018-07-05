@@ -12,6 +12,9 @@ spec:
         role: backend
         env: canary
     spec:
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
       containers:
         - image: us.gcr.io/rfpselectdev/rfpselect-wp:1.0.0
           name: wordpress
