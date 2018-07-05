@@ -5,7 +5,7 @@ metadata:
   labels:
     service: elasticsearch
 spec:
-  serviceName: es
+  serviceName: es-service
   # NOTE: This is number of nodes that we want to run
   # you may update this
   replicas: 1
@@ -58,7 +58,7 @@ spec:
           privileged: true
       containers:
       - name: elasticsearch
-        image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.3.0
+        image: docker.elastic.co/elasticsearch/elasticsearch:6.3.0
         ports:
         - containerPort: 9200
           name: http
