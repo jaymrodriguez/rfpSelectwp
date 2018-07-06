@@ -84,6 +84,8 @@ spec:
           # NOTE: You can increase the heap size
           - name: ES_JAVA_OPTS
             value: -Xms512m -Xmx512m
+          - name: network.host
+            value: 192.168.1.10
         volumeMounts:
         - name: esdata1
           mountPath: /usr/share/elasticsearch/data
@@ -105,3 +107,6 @@ spec:
   resources:
     requests:
       storage: 1Gi
+
+
+      
