@@ -87,6 +87,11 @@ spec:
         volumeMounts:
         - name: esdata1
           mountPath: /usr/share/elasticsearch/data
+          subPath: es
+      volumes:
+      - name: esdata1
+        persistentVolumeClaim:
+          claimName: esdata1
 
 ---
 apiVersion: v1
