@@ -85,7 +85,7 @@ spec:
           - name: ES_JAVA_OPTS
             value: -Xms512m -Xmx512m
           - name: network.host
-            value: 192.168.1.10
+            value: _local_
         volumeMounts:
         - name: esdata1
           mountPath: /usr/share/elasticsearch/data
