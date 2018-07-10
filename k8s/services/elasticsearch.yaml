@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: es-service
+  labels:
+    service: elasticsearch
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 35.199.27.199
+  ports:
+  - name: "serving-main"
+    port: 9200
+    targetPort: 9200
+  - name: "node-to-node"
+    port: 9300
+    targetPort: 9300
+  selector:
+    service: elasticsearch
