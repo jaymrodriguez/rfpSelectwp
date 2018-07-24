@@ -87,9 +87,9 @@ spec:
           - name: network.host
             value: _eth0_
           - name:  http.cors.enabled
-            value: true
+            value: "true"
           - name: http.cors.allow-credentials
-            value: true
+            value: "true"
           - name: http.cors.allow-origin
             value: http://35.194.70.210
           - name: http.cors.allow-headers
