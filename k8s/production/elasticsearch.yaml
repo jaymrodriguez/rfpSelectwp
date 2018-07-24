@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
-  name: elasticsearch
+  name: elasticsearch-prod
   labels:
     service: elasticsearch
 spec:
@@ -91,7 +91,7 @@ spec:
           - name: http.cors.allow-credentials
             value: true
           - name: http.cors.allow-origin
-            value: http://35.194.70.210
+            value: http://35.236.223.218
           - name: http.cors.allow-headers
             value: X-Requested-With, X-Auth-Token, Content-Type, Content-Length, Authorization, Access-Control-Allow-Headers, Accept
         volumeMounts:
