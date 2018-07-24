@@ -86,8 +86,6 @@ spec:
             value: -Xms512m -Xmx512m
           - name: network.host
             value: _eth0_
-<<<<<<< HEAD
-=======
           - name:  http.cors.enabled
             value: true
           - name: http.cors.allow-credentials
@@ -96,7 +94,6 @@ spec:
             value: http://35.194.70.210
           - name: http.cors.allow-headers
             value: X-Requested-With, X-Auth-Token, Content-Type, Content-Length, Authorization, Access-Control-Allow-Headers, Accept
->>>>>>> 51-wp-search-component
         volumeMounts:
         - name: esdata1
           mountPath: /usr/share/elasticsearch/data
