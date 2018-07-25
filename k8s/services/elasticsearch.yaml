@@ -6,7 +6,6 @@ metadata:
     service: elasticsearch
 spec:
   type: LoadBalancer
-  loadBalancerIP: 35.199.27.199
   ports:
   - name: "serving-main"
     port: 9200
